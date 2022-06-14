@@ -8,10 +8,10 @@ document.querySelectorAll(".video").forEach(videoSection => {
         const time = percentage * videoEl.duration
         if (time) {
             //console.log(time)
-            gsap.to(videoEl, {
+            /* gsap.to(videoEl, {
                 currentTime: time
-            })
-            //videoEl.currentTime = time
+            }) */
+            videoEl.currentTime = time
         }
         window.requestAnimationFrame(scrollPlay)
     }
@@ -41,7 +41,7 @@ function setVideoSource() {
 
 window.addEventListener("resize", () => {
     setVideoHeight()
-    setVideoSource()
+    //setVideoSource()
 })
 setVideoHeight()
 setVideoSource()
