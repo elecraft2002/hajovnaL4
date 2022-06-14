@@ -48,14 +48,15 @@ function urlParams() {
 }
 
 readTextFile("names.json", array => {
-    const id = urlParams().get("id")
-    console.log(id)
+    const id = parseInt(urlParams().get("id"))
     array = JSON.parse(array)
     console.log(array)
-    if (typeof id !== Number)
+
+    if (!id && id !== 0)
         return
-    if (!id || id < 0 || id >= array.length)
+    if (id < 0 || id >= array.length)
         return
+    console.log(id)
     const span = document.createElement("span")
     span.innerHTML = array[id].name
     span.classList.add("name")
