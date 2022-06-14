@@ -41,17 +41,29 @@ function readTextFile(file, callback) {
     }
     rawFile.send(null);
 }
+
+function urlParams() {
+    const queryString = window.location.search;
+    return urlParams = new URLSearchParams(queryString);
+}
+
 readTextFile("names.json", array => {
-    const id = 0
+    const id = urlParams().get("id")
+    console.log(id)
     array = JSON.parse(array)
     console.log(array)
+    if (typeof id !== Number)
+        return
+    if (!id || id < 0 || id >= array.length)
+        return
     const span = document.createElement("span")
     span.innerHTML = array[id].name
     span.classList.add("name")
-    document.querySelectorAll('[data-name]').forEach(e=>{
+    document.querySelectorAll('[data-name]').forEach(e => {
         e.append(span)
     })
 })
 
-ScrollReveal({ reset: true, distance: "60px", delay: 500 });
+ScrollReveal({ reset: true, distance: "60px", delay: 500, duration: 1500 });
+ScrollReveal().reveal('.hedding', { origin: "top", reset: false });
 ScrollReveal().reveal('.content__text', { origin: "left" });
