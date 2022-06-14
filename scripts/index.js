@@ -84,3 +84,4 @@ readTextFile("names.json", array => {
 ScrollReveal({ reset: true, distance: "60px", delay: 500, duration: 1500 });
 ScrollReveal().reveal('.hedding', { origin: "top", reset: false });
 ScrollReveal().reveal('.content__text', { origin: "left" });
+ScrollReveal().reveal('.info__block', { origin: "bottom" });

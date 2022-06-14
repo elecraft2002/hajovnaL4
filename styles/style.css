@@ -9,6 +9,7 @@ body {
   height: 6000px;
   font-family: "Roboto", sans-serif;
   overflow-x: hidden;
+  background-color: rgb(14, 14, 14);
 }
 
 .video__section {
@@ -54,13 +55,37 @@ video {
 }
 .hedding {
   font-size: 4em;
+}
+.content__text {
+  font-size: 4rem;
+  margin: 1rem;
+}
 
-}
-.content__text{
-    font-size: 4rem;
-    margin: 1rem;
+.name {
+  color: yellow;
 }
 
-.name{
-    color: yellow;
+
+h2 {
+  font-family: "Bebas Neue", cursive;
 }
+.info{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    margin-top: 100vh;
+    max-width: 1200px;
+    color: white;
+}
+.info__block{
+    width: 50%;
+    padding: 1rem;
+}
+@media only screen and (max-width: 600px) {
+    .info{
+        flex-direction: column;
+    }
+    .info__block{
+        width:calc( 100% - 2rem);
+    }
+  }
