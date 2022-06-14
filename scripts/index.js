@@ -8,10 +8,10 @@ document.querySelectorAll(".video").forEach(videoSection => {
         const time = percentage * videoEl.duration
         if (time) {
             //console.log(time)
-            /* gsap.to(videoEl, {
+            gsap.to(videoEl, {
                 currentTime: time
-            }) */
-            videoEl.currentTime = time
+            })
+            //videoEl.currentTime = time
         }
         window.requestAnimationFrame(scrollPlay)
     }
@@ -79,4 +79,4 @@ readTextFile("names.json", array => {
 ScrollReveal({ reset: true, distance: "60px", delay: 500, duration: 1500 });
 ScrollReveal().reveal('.hedding', { origin: "top", reset: false });
 ScrollReveal().reveal('.content__text', { origin: "left" });
-ScrollReveal().reveal('.info__block', { origin: "bottom" });
+ScrollReveal().reveal('.info__block', { origin: "bottom",delay:0 });
