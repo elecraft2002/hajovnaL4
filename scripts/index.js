@@ -3,13 +3,15 @@
 document.querySelectorAll(".video").forEach(videoSection => {
     const video = videoSection.querySelector(".video__section")
     const videoEl = videoSection.querySelector("video")
-
     function scrollPlay() {
         const percentage = (videoEl.getBoundingClientRect().top - video.getBoundingClientRect().top) / (video.clientHeight - videoEl.clientHeight)
         const time = percentage * videoEl.duration
         if (time) {
             //console.log(time)
-            videoEl.currentTime = time
+            gsap.to(videoEl, {
+                currentTime: time
+            })
+            //videoEl.currentTime = time
         }
         window.requestAnimationFrame(scrollPlay)
     }
@@ -25,10 +27,24 @@ function setVideoHeight() {
     })
 }
 
+function setVideoSource() {
+    const source = window.innerWidth > 800 ? "videos/Pozvánka.mp4" : "videos/Pozvánka_mobile.mp4"
+
+    const video = document.querySelector('[data-video]')
+    if (video.getAttribute("data-src") == source) {
+
+        return
+    }
+    video.setAttribute("data-src", source)
+    video.src = source
+}
+
 window.addEventListener("resize", () => {
     setVideoHeight()
+    setVideoSource()
 })
 setVideoHeight()
+setVideoSource()
 
 function readTextFile(file, callback) {
     let rawFile = new XMLHttpRequest();

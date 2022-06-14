@@ -9,6 +9,16 @@
     <link rel="stylesheet" href="styles/node_modules/normalize.css/normalize.css">
     <link rel="stylesheet" href="./styles/style.css">
     <script src="https://unpkg.com/scrollreveal"></script>
+    <link type="text/css" rel="stylesheet" href="./node_modules/lightgallery/css/lightgallery.css" />
+
+    <!-- lightgallery plugins -->
+    <link type="text/css" rel="stylesheet" href="./node_modules/lightgallery/css/lg-zoom.css" />
+    <link type="text/css" rel="stylesheet" href="./node_modules/lightgallery/css/lg-thumbnail.css" />
+
+
+    <!-- OR -->
+
+    <link type="text/css" rel="stylesheet" href="./node_modules/lightgallery/css/lightgallery-bundle.css" />
 
 </head>
 
@@ -16,7 +26,7 @@
     <section class="video">
         <div class="video__section">
             <div class="video__container">
-                <video src="./videos/Pozvánka.mp4"></video>
+                <video data-video="1" src=""></video>
             </div>
         </div>
         <div class="video__content">
@@ -26,15 +36,23 @@
             <p class="content__text">30. června</p>
             <p class="content__text">2022</p>
             <p class="content__text">Co s sebou</p>
-            
+
             <p data-name="" class="content__text">Těšíme se na tebe </p>
 
         </div>
-        
+
     </section>
     <section class="gallery">
-        
+
     </section>
+    <script src="./node_modules/lightgallery/lightgallery.umd.js"></script>
+
+    <!-- lightgallery plugins -->
+    <script src="./node_modules/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script>
+    <script src="./node_modules/lightgallery/plugins/zoom/lg-zoom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
+        integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="scripts/index.js"></script>
 </body>
 
