@@ -28,14 +28,9 @@ function setVideoHeight() {
 }
 
 function setVideoSource() {
-    const source = window.innerWidth > 800 ? "videos/Pozvánka.mp4" : "videos/Pozvánka_mobile.mp4"
+    const source = window.innerWidth > 800 ? "videos/Pozvánka_1.mp4" : "videos/Pozvánka_mobile_1.mp4"
 
     const video = document.querySelector('[data-video]')
-    if (video.getAttribute("data-src") == source) {
-
-        return
-    }
-    video.setAttribute("data-src", source)
     video.src = source
 }
 
