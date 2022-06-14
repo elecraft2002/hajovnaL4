@@ -8,6 +8,7 @@
     <title>Hájovna L4</title>
     <link rel="stylesheet" href="styles/node_modules/normalize.css/normalize.css">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="styles/loading.css">
     <script src="https://unpkg.com/scrollreveal"></script>
     <link type="text/css" rel="stylesheet" href="./node_modules/lightgallery/css/lightgallery.css" />
 
@@ -23,10 +24,13 @@
 </head>
 
 <body>
+    <div data-loading="" class="loading">
+        <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+    </div>
     <section class="video">
         <div class="video__section">
             <div class="video__container">
-                <video data-video="1" src=""></video>
+                <video  data-video="1" src=""></video>
             </div>
         </div>
         <div class="video__content">
@@ -53,6 +57,7 @@
                 src="https://www.google.com/maps/embed/v1/place?q=Luk%C3%A1%C5%A1ovsk%C3%A1%2041%2C%20Nov%C3%BD%20Harcov%2C%20460%2015%20Liberec&key=AIzaSyADiAnccdTem49t6_9dnKfuK-pPkkPzeO8"></iframe>
         </div>
     </section>
+
     <script src="./node_modules/lightgallery/lightgallery.umd.js"></script>
 
     <!-- lightgallery plugins -->

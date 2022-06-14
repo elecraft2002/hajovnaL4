@@ -10,6 +10,7 @@ body {
   font-family: "Roboto", sans-serif;
   overflow-x: hidden;
   background-color: rgb(14, 14, 14);
+  overflow-y: hidden;
 }
 
 .video__section {
@@ -65,27 +66,42 @@ video {
   color: yellow;
 }
 
-
 h2 {
   font-family: "Bebas Neue", cursive;
 }
-.info{
-    display: flex;
-    flex-direction: row;
-    margin: auto;
-    margin-top: 100vh;
-    max-width: 1200px;
-    color: white;
+.info {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  margin-top: 100vh;
+  max-width: 1200px;
+  color: white;
 }
-.info__block{
-    width: 50%;
-    padding: 1rem;
+.info__block {
+  width: 50%;
+  padding: 1rem;
 }
 @media only screen and (max-width: 600px) {
-    .info{
-        flex-direction: column;
-    }
-    .info__block{
-        width:calc( 100% - 2rem);
-    }
+  .info {
+    flex-direction: column;
   }
+  .info__block {
+    width: calc(100% - 2rem);
+  }
+}
+
+.loading {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 999;
+  background-color: rgb(14, 14, 14);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  transition: 1s;
+}
+.loading--hidden{
+    opacity: 0;
+}

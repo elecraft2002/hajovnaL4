@@ -30,8 +30,18 @@ function setVideoHeight() {
 function setVideoSource() {
     const source = window.innerWidth > 800 ? "videos/Pozvánka_1.mp4" : "videos/Pozvánka_mobile_1.mp4"
 
-    const video = document.querySelector('[data-video]')
+    //const video = document.querySelector('[data-video]')
+    const video = document.querySelector('video')
     video.src = source
+    video.addEventListener("loadeddata", e => {
+        console.log("loaded")
+        const loading = document.querySelector('[data-loading]')
+        loading.classList.add("loading--hidden")
+        document.querySelector("body").style.overflowY = "auto"
+        setTimeout(() => {
+            loading.remove()
+        }, 1000);
+    })
 }
 
 window.addEventListener("resize", () => {
@@ -79,4 +89,4 @@ readTextFile("names.json", array => {
 ScrollReveal({ reset: true, distance: "60px", delay: 500, duration: 1500 });
 ScrollReveal().reveal('.hedding', { origin: "top", reset: false });
 ScrollReveal().reveal('.content__text', { origin: "left" });
-ScrollReveal().reveal('.info__block', { origin: "bottom",delay:0 });
+ScrollReveal().reveal('.info__block', { origin: "bottom", delay: 0 });
