@@ -33,7 +33,7 @@ function setVideoSource() {
     //const video = document.querySelector('[data-video]')
     const video = document.querySelector('video')
     video.src = source
-    video.addEventListener("loadeddata", e => {
+    video.addEventListener("canplaythrough", e => {
         console.log("loaded")
         const loading = document.querySelector('[data-loading]')
         loading.classList.add("loading--hidden")
