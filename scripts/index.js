@@ -33,7 +33,7 @@ function setVideoSource() {
     //const video = document.querySelector('[data-video]')
     const video = document.querySelector('video')
     video.src = source
-
+    video.load()
     video.addEventListener("canplay", e => {
         // video.removeEventListener("canplay",e=>{}, { passive: false })
         console.log("loaded")
@@ -43,7 +43,7 @@ function setVideoSource() {
         setTimeout(() => {
             loading.remove()
         }, 1000);
-    }, {once: true })
+    }, { once: true })
 }
 
 window.addEventListener("resize", () => {
