@@ -43,6 +43,7 @@ video {
   font-family: "Bebas Neue", cursive;
   filter: drop-shadow(0 0 5px black);
   max-width: 1200px;
+  text-align: center;
 }
 
 .glassy {
@@ -62,7 +63,7 @@ video {
   margin: 1rem;
 }
 
-.name {
+.highlight {
   color: yellow;
 }
 
@@ -73,9 +74,13 @@ h2 {
   display: flex;
   flex-direction: row;
   margin: auto;
-  margin-top: 100vh;
   max-width: 1200px;
   color: white;
+  margin-bottom: 2rem;
+}
+
+.space {
+  margin-top: 100vh;
 }
 .info__block {
   width: 50%;
@@ -102,10 +107,22 @@ h2 {
   top: 0;
   transition: 1s;
 }
-.loading--hidden{
-    opacity: 0;
+.loading--hidden {
+  opacity: 0;
 }
 
-#map{
-  transform: scale(1) translate(0px,0px);
+#map {
+  transform: scale(1) translate(0px, 0px);
+}
+
+.qrcode img {
+  width: 100%;
+}
+p {
+  font-size: 1.25em;
+}
+
+h2{
+  color: yellow;
+  text-align: center;
 }

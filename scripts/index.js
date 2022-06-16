@@ -37,6 +37,7 @@ function setVideoSource() {
     video.addEventListener("canplaythrough", e => {
         // video.removeEventListener("canplay",e=>{}, { passive: false })
         console.log("loaded")
+        setVideoHeight()
         const loading = document.querySelector('[data-loading]')
         loading.classList.add("loading--hidden")
         document.querySelector("body").style.overflowY = "auto"
@@ -50,7 +51,6 @@ window.addEventListener("resize", () => {
     setVideoHeight()
     //setVideoSource()
 })
-setVideoHeight()
 setVideoSource()
 
 function readTextFile(file, callback) {
@@ -80,15 +80,16 @@ readTextFile("names.json", array => {
     if (id < 0 || id >= array.length)
         return
     console.log(id)
-    const span = document.createElement("span")
-    span.innerHTML = array[id].name
-    span.classList.add("name")
+    //const span = document.createElement("span")
+    //span.innerHTML = array[id].name
+    //span.classList.add("name")
     document.querySelectorAll('[data-name]').forEach(e => {
-        e.append(span)
+        //e.append(span)
+        e.innerHTML = array[id].name
     })
 })
 
 ScrollReveal({ reset: true, distance: "60px", delay: 500, duration: 1500 });
 ScrollReveal().reveal('.hedding', { origin: "top", reset: false });
 ScrollReveal().reveal('.content__text', { origin: "left" });
-ScrollReveal().reveal('.info__block', { origin: "bottom", delay: 0 });
+ScrollReveal().reveal('.info__block', { origin: "left", delay: 0 });
