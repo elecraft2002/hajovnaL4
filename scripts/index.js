@@ -23,7 +23,6 @@ function setVideoHeight() {
         const video = videoSection.querySelector(".video__section")
         const videoContent = videoSection.querySelector(".video__content")
         video.style.height = videoContent.clientHeight + window.innerHeight + "px"
-        console.log(videoContent.clientHeight)
     })
 }
 
@@ -73,13 +72,11 @@ function urlParams() {
 readTextFile("names.json", array => {
     const id = parseInt(urlParams().get("id"))
     array = JSON.parse(array)
-    console.log(array)
 
     if (!id && id !== 0)
         return
     if (id < 0 || id >= array.length)
         return
-    console.log(id)
     //const span = document.createElement("span")
     //span.innerHTML = array[id].name
     //span.classList.add("name")

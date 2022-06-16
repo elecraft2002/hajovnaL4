@@ -7,7 +7,7 @@ html {
 body {
   margin: 0;
   height: 6000px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Bebas Neue", cursive;
   overflow-x: hidden;
   background-color: rgb(14, 14, 14);
   overflow-y: hidden;
@@ -128,9 +128,11 @@ h2 {
 }
 p {
   font-size: 1.25em;
+  text-align: center;
 }
 
 h2 {
   color: var(--secondary);
   text-align: center;
+  font-size: 2rem;
 }
