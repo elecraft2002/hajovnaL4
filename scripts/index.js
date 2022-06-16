@@ -34,7 +34,7 @@ function setVideoSource() {
     const video = document.querySelector('video')
     video.src = source
     video.load()
-    video.addEventListener("canplay", e => {
+    video.addEventListener("canplaythrough", e => {
         // video.removeEventListener("canplay",e=>{}, { passive: false })
         console.log("loaded")
         const loading = document.querySelector('[data-loading]')
