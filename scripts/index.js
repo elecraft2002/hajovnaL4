@@ -88,5 +88,13 @@ readTextFile("names.json", array => {
 
 ScrollReveal({ reset: true, distance: "60px", delay: 500, duration: 1500 });
 ScrollReveal().reveal('.hedding', { origin: "top", reset: false });
-ScrollReveal().reveal('.content__text', { origin: "left",delay: 100 });
+ScrollReveal().reveal('.content__text', { origin: "left", delay: 100 });
 ScrollReveal().reveal('.info__block', { origin: "left", delay: 0 });
+
+/* const ucitele = [...document.querySelectorAll(".ucitel")].map(ucitel => {
+    const name = ucitel.querySelector("h3").innerText
+    const email = ucitel.querySelector(".email a").innerText
+    const telefon = ucitel.querySelector(".telefon a").innerText
+    return { name, email, telefon }
+})
+console.log(ucitele) */
