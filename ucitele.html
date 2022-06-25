@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hájovna L4</title>
+    <link rel="stylesheet" href="styles/node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="styles/loading.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link type="text/css" rel="stylesheet" href="./node_modules/lightgallery/css/lightgallery.css" />
+
+    <!-- lightgallery plugins -->
+    <link type="text/css" rel="stylesheet" href="./node_modules/lightgallery/css/lg-zoom.css" />
+    <link type="text/css" rel="stylesheet" href="./node_modules/lightgallery/css/lg-thumbnail.css" />
+
+
+    <!-- OR -->
+
+    <link type="text/css" rel="stylesheet" href="./node_modules/lightgallery/css/lightgallery-bundle.css" />
+
+</head>
+
+<body>
+    <div data-loading="" class="loading">
+        <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <section class="video">
+        <div class="video__section">
+            <div class="video__container">
+                <video data-video="1" src=""></video>
+            </div>
+        </div>
+        <div class="video__content">
+            <div class="hedding">
+                <h1><span style="font-size: 1.2em;">Kneipe</span><span class="highlight"><br>Bei Zwei<br>Meister</span>
+                </h1>
+            </div>
+            <p class="content__text">29. června</p>
+            <p class="content__text">2022</p>
+            <p class="content__text">Dobrý den <span class="highlight" data-name></span>, zveme Vás na Vaši první a poslední <span
+                    class="highlight">Lyckařskou</span>
+                hájovnu! 😎</p>
+            <p class="content__text">
+                Co s sebou? Krom dobré nálady si určitě vemte <span class="highlight">spacák</span> a <span
+                    class="highlight">karimatku</span>, pokud chcete dát spánku aspoň malou
+                šanci. 🥺
+            </p>
+            <p class="content__text">
+                O alkohol 🍺 se postaráme my, a jídlo bude také <span class="highlight">(</span>pizzy, polévky, pečivo a
+                také se bude grilovat<span class="highlight">)</span>. 🍿🍔
+            </p>
+            <p class="content__text"><span class="highlight">Odvoz</span> bude zajištěn našimi zkušenými řidiči.😈</p>
+            <p class="content__text">
+                Adresa je <a class="highlight" href="#adresa">Lukášovská 41, Nový Harcov, 460 15 Liberec</a>. ✨
+            </p>
+
+
+            <p class="content__text">Těšíme se na Vás <span class="highlight" data-name></span> 🥵</p>
+
+        </div>
+
+    </section>
+    <section id="adresa">
+        <div class="space info">
+            <div class="info__block">
+                <h2>Kde nás najdete</h2>
+                <p>Lukášovská 41, Nový Harcov, 460 15 Liberec</p>
+                <p>Konec světa..</p>
+            </div>
+            <iframe class="info__block" height="450" style="border:0" loading="lazy" allowfullscreen
+                src="https://www.google.com/maps/embed/v1/place?q=Luk%C3%A1%C5%A1ovsk%C3%A1%2041%2C%20Nov%C3%BD%20Harcov%2C%20460%2015%20Liberec&key=AIzaSyADiAnccdTem49t6_9dnKfuK-pPkkPzeO8"></iframe>
+        </div>
+    </section>
+    <section id="zahlen">
+        <div class="qrcode info">
+            <div class="info__block">
+                <h2>Platba</h2>
+                <p>
+                    Platba předem <b>150 Kč</b><br>
+                    Platba na místě <b>200 Kč</b>
+                </p>
+            </div>
+            <div class="info__block"> <img src="./images/qrcode.jpg" alt="qrcode"></div>
+        </div>
+    </section>
+    <section>
+        <div class="info">
+            <img src="./images/cat.jpg" alt="cat uwu">
+            <a class="highlight" target="_blank" href="https://www.instagram.com/vojtik_suchanek/">@vojtik_suchanek
+                🥺👉👈</a>
+        </div>
+    </section>
+
+    <script src="./node_modules/lightgallery/lightgallery.umd.js"></script>
+
+    <!-- lightgallery plugins -->
+    <script src="./node_modules/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script>
+    <script src="./node_modules/lightgallery/plugins/zoom/lg-zoom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
+        integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="scripts/index.js"></script>
+</body>
+
+</html>
